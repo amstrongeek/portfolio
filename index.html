@@ -24,19 +24,19 @@
 
   <!-- Icône de volume -->
   <div class="volume-control">
-    <i class="fas fa-volume-up" id="volume-icon"></i>
-    <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
-  </div>
-
-  <!-- Texte en bas -->
-  <div class="footer">
-    Developed by [Ton Nom]
+    <div class="volume-icon-container">
+      <i class="fas fa-volume-up" id="volume-icon"></i>
+      <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
+    </div>
   </div>
 
   <script>
     const volumeSlider = document.getElementById('volume-slider');
     const volumeIcon = document.getElementById('volume-icon');
     const backgroundMusic = document.getElementById('background-music');
+
+    // Set the initial volume to 50%
+    backgroundMusic.volume = 0.5;
 
     // Change the volume when the slider is used
     volumeSlider.addEventListener('input', () => {

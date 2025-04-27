@@ -34,6 +34,37 @@ body, html {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   }
   
+  /* Icône de volume et contrôle */
+  .volume-control {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+  }
+  
+  .volume-icon-container {
+    position: relative;
+    display: inline-block;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+  }
+  
+  #volume-slider {
+    width: 150px;
+    display: none; /* Initialement caché */
+    margin-left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    position: absolute;
+    top: 30px;
+  }
+  
+  .fas {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
   /* Texte en bas */
   .footer {
     position: absolute;
@@ -45,31 +76,4 @@ body, html {
     padding: 10px 0;
     font-size: 14px;
   }
-  
-  /* Styling pour ton contenu */
-  .p2zBwX_ff639c93586c40a8688e.false {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  }
-  
-  .p2zBwX_ff639c93586c40a8688e.false img {
-    max-width: 100px;
-    border-radius: 50%;
-  }
-  
-  .q2cpcn_167257ca9e3d7cedbb60 {
-    text-align: center;
-    color: white;
-  }
-  
-  .q2cpcn_167257ca9e3d7cedbb60 h3 {
-    font-size: 14px;
-  }
-  
   
