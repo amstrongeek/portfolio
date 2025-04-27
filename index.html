@@ -16,44 +16,42 @@
     <p>Welcome to your website!</p>
   </div>
 
-  <!-- Contenu de la section "Developed by" -->
-  <div class="p2zBwX_ff639c93586c40a8688e false">
-    <div class="b3YLyV_eaee5107d30fdb87fa98" style="margin-top:20px">
-      <div class="ip9cYn_3a4a8dcc3beaf4519bf5">
-        <div class="swR23n_7e7f93f4c67d51b4dcc8">
-          <div class="eWcN1Y_ec83115ffbe626222d81">
-            <img alt="Discord Avatar" src="https://cdn.discordapp.com/avatars/709086029239418911/a_a81b5b7aa511e9d257656ac19f134c3d.gif">
-            <img class="sVYXO3_123666a39835a15d8188" alt="" src="https://assets.guns.lol/dnd.png">
-          </div>
-        </div>
-        <div class="q2cpcn_167257ca9e3d7cedbb60">
-          <div class="dx31uU_f471df88ff8764d2fdb6">
-            <div class="a35LRc_1b6e8123b898c40378c5">
-              <span style="font-weight: 550; font-size: 18.5px;">amstrong_geek</span>
-              <div class="bF2Ryx_3e1b38670f31f8b5bf00">
-                <div class="y2lN0n_cc7f47191677333de438">
-                  <img alt="Discord Badge" src="https://cdn.discordapp.com/badge-icons/011940fd013da3f7fb926e4a1cd2e618.png">
-                </div>
-                <div class="y2lN0n_cc7f47191677333de438">
-                  <img alt="Discord Badge" src="https://cdn.discordapp.com/badge-icons/6bdc42827a38498929a4920da12695d9.png">
-                </div>
-                <div class="y2lN0n_cc7f47191677333de438">
-                  <img alt="Discord Badge" src="https://cdn.discordapp.com/badge-icons/2ba85e8026a8614b640c2837bcdfe21b.png">
-                </div>
-              </div>
-            </div>
-            <h3 style="font-weight: 300; font-size: 13.5px;">
-              <span class="aZcc0V_ebb0dc0e558c005bb35c">Playing</span> Wallpaper Alive
-            </h3>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- Audio -->
+  <audio id="background-music" loop autoplay>
+    <source src="Input/sounds/amour-plastique-clip-officiel.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Icône de volume -->
+  <div class="volume-control">
+    <i class="fas fa-volume-up" id="volume-icon"></i>
+    <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
   </div>
 
   <!-- Texte en bas -->
   <div class="footer">
     Developed by [Ton Nom]
   </div>
+
+  <script>
+    const volumeSlider = document.getElementById('volume-slider');
+    const volumeIcon = document.getElementById('volume-icon');
+    const backgroundMusic = document.getElementById('background-music');
+
+    // Change the volume when the slider is used
+    volumeSlider.addEventListener('input', () => {
+      backgroundMusic.volume = volumeSlider.value;
+    });
+
+    // Show the slider when mouse hovers over the volume icon
+    volumeIcon.addEventListener('mouseover', () => {
+      volumeSlider.style.display = 'block';
+    });
+
+    // Hide the slider when the mouse leaves the volume icon
+    volumeIcon.addEventListener('mouseleave', () => {
+      volumeSlider.style.display = 'none';
+    });
+  </script>
 </body>
 </html>
