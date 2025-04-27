@@ -12,7 +12,10 @@ body, html {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url('portfolio/image/background-hub.png') no-repeat center center/cover;
+    background-image: url('portfolio/image/background-hub.png'); /* Utilisation de background-image */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     filter: blur(8px);
     z-index: -1;
   }
@@ -39,4 +42,3 @@ body, html {
   .centered-box p {
     margin: 0;
   }
-  
