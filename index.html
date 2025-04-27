@@ -4,30 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mon Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Fond de page avec image de fond -->
-  <div class="background"></div>
-
-  <!-- Contenu principal de la page -->
+  <!-- Contenu de la page -->
   <div class="content">
     <h1>Bienvenue sur mon portfolio</h1>
     <p>Ceci est un site pour présenter mon travail.</p>
-    <!-- Autres sections de contenu... -->
   </div>
 
   <!-- Audio en arrière-plan -->
   <audio id="background-audio" loop>
     <source src="Input/sounds/amour-plastique-clip-officiel.mp3" type="audio/mp3">
-    Votre navigateur ne supporte pas la balise audio.
   </audio>
 
   <script>
-    // Récupérer l'élément audio et ajuster le volume à 50%
+    // Lancer la musique et régler le volume à 50% dès le chargement
     const audio = document.getElementById('background-audio');
-    audio.volume = 0.5;  // Volume à 50% par défaut
-    audio.play();  // Démarrer la musique dès le chargement de la page
+    audio.volume = 0.5;  // Volume à 50%
+    audio.play();  // Démarrer la musique immédiatement
   </script>
 </body>
 </html>
