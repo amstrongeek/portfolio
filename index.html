@@ -1,59 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Website</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Mon Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Fond flou -->
+  <!-- Fond de page avec image de fond -->
   <div class="background"></div>
 
-  <!-- Carré avec du texte -->
-  <div class="centered-box">
-    <h1>Your Title Here</h1>
-    <p>Welcome to your website!</p>
+  <!-- Contenu principal de la page -->
+  <div class="content">
+    <h1>Bienvenue sur mon portfolio</h1>
+    <p>Ceci est un site pour présenter mon travail.</p>
+    <!-- Autres sections de contenu... -->
   </div>
 
-  <!-- Audio -->
-  <audio id="background-music" loop autoplay>
+  <!-- Audio en arrière-plan -->
+  <audio id="background-audio" loop>
     <source src="Input/sounds/amour-plastique-clip-officiel.mp3" type="audio/mp3">
+    Votre navigateur ne supporte pas la balise audio.
   </audio>
 
-  <!-- Icône de volume -->
-  <div class="volume-control">
-    <div class="volume-icon-container">
-      <!-- Icône de volume (Flaticon) -->
-      <a href="https://www.flaticon.com/free-icons/volume" title="Volume icons created by Lizel Arina - Flaticon">
-        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920343.png" alt="Volume icon" id="volume-icon" />
-      </a>
-      <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
-    </div>
-  </div>
-
   <script>
-    const volumeSlider = document.getElementById('volume-slider');
-    const volumeIcon = document.getElementById('volume-icon');
-    const backgroundMusic = document.getElementById('background-music');
-
-    // Set the initial volume to 50%
-    backgroundMusic.volume = 0.5;
-
-    // Change the volume when the slider is used
-    volumeSlider.addEventListener('input', () => {
-      backgroundMusic.volume = volumeSlider.value;
-    });
-
-    // Show the slider when mouse hovers over the volume icon
-    volumeIcon.addEventListener('mouseover', () => {
-      volumeSlider.style.display = 'block';
-    });
-
-    // Hide the slider when the mouse leaves the volume icon
-    volumeIcon.addEventListener('mouseleave', () => {
-      volumeSlider.style.display = 'none';
-    });
+    // Récupérer l'élément audio et ajuster le volume à 50%
+    const audio = document.getElementById('background-audio');
+    audio.volume = 0.5;  // Volume à 50% par défaut
+    audio.play();  // Démarrer la musique dès le chargement de la page
   </script>
 </body>
 </html>
