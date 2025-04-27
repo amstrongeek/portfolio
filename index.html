@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Website</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Ajout de Flaticon pour l'icône -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
   <!-- Fond flou -->
@@ -18,14 +20,17 @@
 
   <!-- Audio -->
   <audio id="background-music" loop autoplay>
-    <source src="Input/sounds/amour-plastique-clip-officiel.mp3" type="audio/mp3">
+    <source src="music/your-audio-file.mp3" type="audio/mp3">
     Your browser does not support the audio element.
   </audio>
 
   <!-- Icône de volume -->
   <div class="volume-control">
     <div class="volume-icon-container">
-      <i class="fas fa-volume-up" id="volume-icon"></i>
+      <!-- Utilisation de l'icône Sound Waves de Flaticon -->
+      <a href="https://www.flaticon.com/free-icons/sound-waves" title="sound waves icons">
+        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920352.png" alt="Sound waves" id="volume-icon" />
+      </a>
       <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
     </div>
   </div>
